@@ -128,4 +128,4 @@ Sugestão de modelo em estrela (*Star Schema*) com **uma fato** e **quatro dimen
 
 ### 5.2 Ferramenta de análise
 
-  *Jupyter Notebook com pandas + matplotlib/seaborn/plotly para análises exploratórias e documentadas.
+  **Jupyter Notebook com pandas + matplotlib/seaborn/plotly para análises exploratórias e documentadas.**
