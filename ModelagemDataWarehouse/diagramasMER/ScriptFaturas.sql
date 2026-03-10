@@ -19,11 +19,17 @@ create table datas_compra (
 	trimestre int
 );
 
+create table estabelecimentos (
+	id_estabelecimento integer primary key,
+	nome_estabelecimento text
+);
+
 create table transacoes (
 	id_transacao integer primary key,
 	id_titular int,
 	id_data int,
 	id_categoria int,
+	id_estabelecimento int,
 	valor_brl numeric(10,2),
 	valor_usd numeric(10,2),
 	cotacao_brl numeric(10,2),
@@ -32,5 +38,8 @@ create table transacoes (
 	total_parcelas int,
 	foreign key (id_titular) references titulares(id_titular),
 	foreign key (id_data) references datas_compra(id_data),
-	foreign key (id_categoria) references categorias(id_categoria)
+	foreign key (id_categoria) references categorias(id_categoria),
+	foreign key (id_estabelecimento) references estabelecimentos(id_estabelecimento)
+
 );
+
