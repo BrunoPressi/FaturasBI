@@ -104,15 +104,14 @@ Sugestão de modelo em estrela (*Star Schema*) com **uma fato** e **quatro dimen
 
 ### 4.3 Load (L)
 
-  * **Destino:** banco de dados (PostgreSQL, MySQL, SQL Server, SQLite) ou ferramenta de DW (ex.: dimensões e fato em tabelas).
+  * **Destino:** banco de dados PostgreSQL.
   * **Ordem sugerida:** carregar dimensões primeiro (Data, Titular, Categoria, Estabelecimento), depois a fato.
   * **Incremental vs full:** definir se cada execução recarrega tudo (*full*) ou só novos arquivos/novos registros (*incremental*) — para o projeto, *full* é aceitável.
 
-### 4.4 Ferramentas sugeridas (flexível)
+### 4.4 Ferramentas Utilizadas
 
-  * **Scripts em Python:** pandas + sqlalchemy ou psycopg2 para ETL e carga.
-  * **Banco:** PostgreSQL ou SQLite para entrega e portabilidade.
-  * **Alternativa low-code:** Pentaho Data Integration (PDI) ou similar para desenhar o ETL.
+  * **Scripts em Python:** pandas + sqlalchemy/psycopg2 para ETL e carga.
+  * **Banco:** PostgreSQL 
 
 ## 5\. Análise dos Dados e Ferramentas
 
@@ -127,10 +126,6 @@ Sugestão de modelo em estrela (*Star Schema*) com **uma fato** e **quatro dimen
 7.  **Dia da semana** com mais transações ou maior volume.
 8.  **Estornos e créditos:** total e impacto por titular/categoria.
 
-### 5.2 Ferramentas de análise (escolher ao menos uma)
+### 5.2 Ferramenta de análise
 
-  * **Desenvolver:** relatórios em SQL + planilhas (Excel/Google Sheets) ou aplicação web simples (ex.: Flask/Streamlit + gráficos).
-  * **Acoplar:**
-      * Metabase ou Apache Superset (open source) conectados ao DW.
-      * Power BI ou Google Data Studio / Looker Studio com conexão ao banco ou CSV processado.
-      * Jupyter Notebook com pandas + matplotlib/seaborn/plotly para análises exploratórias e documentadas.
+  *Jupyter Notebook com pandas + matplotlib/seaborn/plotly para análises exploratórias e documentadas.
